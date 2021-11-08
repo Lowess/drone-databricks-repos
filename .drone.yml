@@ -1,0 +1,12 @@
+---
+
+pipeline:
+  release:
+    image: plugins/docker
+    registry: gumgum-docker.jfrog.io
+    repo: gumgum-docker.jfrog.io/${DRONE_REPO_NAME}
+    tags:
+      - ${DRONE_TAG}
+    secrets: [ docker_username, docker_password ]
+    when:
+      event: tag

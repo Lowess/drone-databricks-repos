@@ -2,7 +2,7 @@
 #
 #     docker build --rm=true -t gumgum/drone-ecs-autoscaler .
 
-FROM python:3.6-alpine
+FROM python:3.9-alpine
 MAINTAINER Florian Dambrine <florian@gumgum.com>
 
 ENV PYTHONUNBUFFERED 1
